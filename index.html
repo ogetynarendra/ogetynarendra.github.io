@@ -3,82 +3,1324 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Narendra Ogety's Portfolio</title>
+
+    <!-- --------- UNICONS ---------- -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- --------- CSS ---------- -->
     <style>
-        h2 {
-            text-align: left;
+ul{
+ color: grey;
+text-align: center;
+list-style-type: none;
+            padding: 0;
+            margin: 0;
+}
+
+ h4{
+            color: lightblue; /* Change 'blue' to any color you prefer */
         }
-        .intro img {
-            width: 30px;
-        }
-        .technologies img {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-            transition: transform 0.3s ease;
-        }
-        .technologies img:hover {
-            transform: scale(1.2);
-        }
-        .about-me, .connect {
-            margin-top: 20px;
-        }
-        .badge {
-            display: inline-block;
-            background-color: #0077B5;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-family: Arial, sans-serif;
-            transition: background-color 0.3s ease;
-        }
-        .badge:hover {
-            background-color: #005582;
-        }
-    </style>
+p{
+   color: white
+}
+/* ----- POPPINS FONT Link ----- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+.img-container {
+    display: flex;
+     /* Center the content horizontally */
+     /* Add horizontal scrolling if needed */
+}
+
+/* Optional styling for the image */
+img {
+    margin-right: 10px; /* Adjust spacing between images */
+    width: 180px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure the last image doesn't get cut off by the container */
+.img-container img:last-child {
+    margin-right: 0; /* Remove margin for the last image */
+}
+
+/* ----- VARIABLES ----- */
+:root {
+    /* Background and text colors */
+    --body-color: #000; /* Black background */
+    --text-color-primary: #fff; /* White for primary text */
+    --text-color-secondary: #ccc; /* Light grey for secondary text */
+    --deep-blue: #00008b; /* Deep blue color */
+
+    /* Element colors */
+    --first-color: #6b57e0; /* Purple */
+    --first-color-hover: #285bd4; /* Darker purple on hover */
+
+    --big-color: #87CEEB; /* Sky blue */
+    --big-color-hover: #fff; /* White on hover */
+
+    --second-color: #00c9ff; /* Light blue */
+    --third-color: #c0a631; /* Gold */
+
+    /* Shadow color */
+    --first-shadow-color: rgba(255, 255, 255, 0.2); /* Softer shadow color */
+}
+
+/* ----- BASE ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ------- BASE -------- */
+body {
+    background: var(--body-color); /* Black background */
+    color: var(--text-color-primary); /* White text */
+}
+
+/* Update specific elements with deep blue */
+h4 {
+    color: var(--deep-blue); /* Deep blue */
+}
+
+/* Update navigation bar with deep blue */
+nav {
+    background: var(--deep-blue); /* Deep blue */
+}
+
+/* Update footer box with deep blue */
+footer {
+    background: var(--deep-blue); /* Deep blue */
+}
+
+/* ----- SMOOTH SCROLL ----- */
+html{
+    scroll-behavior: smooth;
+}
+
+/* ----- CHANGE THE SCROLL BAR DESIGN ----- */
+::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 25px;
+}
+::-webkit-scrollbar-track{
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb{
+    background: #ccc;
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #bbb;
+}
+
+
+/* ---##-- REUSABLE CSS --##--- */
+
+/* ----- GLOBAL BUTTON DESIGN ----- */
+.btn{
+    font-weight: 500;
+    padding: 12px 20px;
+    background: #efefef;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+}
+.no{
+color:grey;
+}
+.btn>i{
+    margin-left: 10px;
+}
+.btn:hover{
+    background: var(--second-color);
+    color: var(--color-white);
+}
+
+/* ----- GLOBAL ICONS DESIGN ----- */
+i{
+    font-size: 16px;
+}
+
+/* ------- BASE -------- */
+body{
+    background: var(--body-color);
+}
+.container{
+    width: 100%;
+    position: relative;
+}
+
+/* ----- NAVIGATION BAR ----- */
+nav{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 90px;
+    line-height: 90px;
+    background: var(--body-color);
+    padding-inline: 9vw;
+    transition: .3s;
+    z-index: 100;
+}
+.nav-logo{
+   position: relative;
+}
+.nav-name{
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--text-color-third);
+}
+.nav-logo span{
+    position: absolute;
+    top: -15px;
+    right: -20px;
+    font-size: 5em;
+    color: var(--text-color-second);
+}
+.nav-menu, .nav_menu_list{
+    display: flex;
+}
+.nav-menu .nav_list{
+    list-style: none;
+    position: relative;
+}
+.nav-link{
+    text-decoration: none;
+    color: var(--text-color-second);
+    font-weight: 500;
+    padding-inline: 15px;
+    margin-inline: 20px;
+}
+.nav-menu-btn{
+    display: none;
+}
+.nav-menu-btn i{
+    font-size: 28px;
+    cursor: pointer;
+}
+.active-link{
+    position: relative;
+    color: var(--first-color);
+    transition: .3;
+}
+.active-link::after{
+    content: '';
+    position: relative;
+    left: 50%;
+    bottom: -15px;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    background: var(--first-color);
+    border-radius: 50%;
+}
+
+
+/* ----- WRAPPER DESIGN ----- */
+.wrapper{
+    padding-inline: 10vw;
+}
+
+/* ----- FEATURED BOX ----- */
+.featured-box{
+    position: relative;
+    display: flex;
+    height: 100vh;
+    min-height: 700px;
+}
+
+/* ----- FEATURED TEXT BOX ----- */
+.featured-text{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 80vh;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 20px;
+}
+.featured-text-card span{
+    background: var(--third-color);
+    color: var(--color-white);
+    padding: 3px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+.featured-name{
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--text-color-second);
+    margin-block: 20px;
+}
+.typedText{
+    text-transform: capitalize;
+    color: violet;
+}
+.featured-text-info{
+    font-size: 15px;
+    margin-bottom: 30px;
+    color: var(--text-color-second);
+}
+.featured-text-btn{
+    display: flex;
+    gap: 20px;
+}
+.featured-text-btn>.blue-btn{
+    background: var(--first-color);
+    color: var(--color-white);
+}
+.featured-text-btn>.blue-btn:hover{
+    background: var(--first-color-hover);
+}
+.social_icons{
+    display: flex;
+    margin-top: 5em;
+    gap: 30px;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+.icon:hover{
+    color: var(--first-color);
+}
+
+
+/* ----- FEATURED IMAGE BOX ----- */
+.featured-image{
+    display: flex;
+    justify-content: right;
+    align-content: center;
+    min-height: 80vh;
+    width: 50%;
+}
+.image{
+    margin: auto 0;
+    width: 380px;
+    height: 380px;
+    border-radius: 55% 45% 55% 45%;
+    overflow: hidden;
+    animation: imgFloat 7s ease-in-out infinite;
+}
+.image img{
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+}
+@keyframes imgFloat {
+    50%{
+        transform: translateY(10px);
+        border-radius: 45% 55% 45% 55%;
+    }
+}
+.scroll-btn{
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   translate: -50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 150px;
+   height: 50px;
+   gap: 5px;
+   text-decoration: none;
+   color: var(--text-color-second);
+   background: var(--color-white);
+   border-radius: 30px;
+   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+.scroll-btn i{
+    font-size: 20px;
+}
+
+/* ----- MAIN BOX ----- */
+.section{
+    padding-block: 5em;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+}
+.col{
+    display: flex;
+    width: 50%;
+}
+
+/* -- ## --- RESUABLE CSS -- ## -- */
+.top-header{
+    text-align: center;
+    margin-bottom: 5em;
+}
+.top-header h1{
+    font-weight: 600;
+    color: var(--text-color-second);
+    margin-bottom: 10px;
+}
+.top-header span{
+    color: #999;
+}
+h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color-second);
+    margin-bottom: 15px;
+}
+
+/* ----- ABOUT INFO ----- */
+.about-info{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 30px 70px;
+    padding-inline: 20px;
+    width: 100%;
+    background: var(--color-white);
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    border-radius: 20px;
+    color: white;
+}
+.label1{
+align-items: center;
+
+padding-inline: 20px;}
+.about-info p{
+    text-align: center;
+    font-size: 15px;
+    color: white;
+}
+.about-btn button{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: var(--first-color);
+    color: var(--color-white);
+    border-radius: 30px;
+}
+.about-btn button:hover{
+    background: var(--first-color-hover);
+}
+
+/* ----- ABOUT / SKILLS BOX ----- */
+.skills-box{
+    margin: 10px;
+}
+.skills-header{
+    margin-bottom: 10px;
+}
+.skillssub-header{
+    margin-bottom: 2px;
+    font-size: 19px;
+    background: var(--big-color);
+    color: var(--color-white);
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+.skills-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.skills-list span{
+    font-size: 14px;
+    background: var(--first-color);
+    color: var(--color-white);
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+
+/* ----- PROJECTS BOX ----- */
+.project-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.project-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    height: 250px;
+    background: var(--first-color);
+    border-radius: 20px;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    overflow: hidden;
+   
+}
+
+.project-box>i{
+    font-size: 50px;
+    color: #00B5E7;
+    margin-bottom: 25px;
+}
+.project-box label{
+    font-size: 15px;
+    color: #777;
+}
+.project-box::after, .contact-info::after{
+    content: "";
+    position: absolute;
+    bottom: -100%;
+    background: var(--first-color-hover);
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+    z-index: 1;
+}
+.project-box:hover.project-box::after,
+.contact-info:hover.contact-info::after{
+    bottom: 0;
+}
+.project-box:hover.project-box i,
+.project-box:hover.project-box>h3,
+.project-box:hover.project-box>label{
+    color: var(--color-white);
+    z-index: 2;
+}
+
+/* ----- CONTACT BOX ----- */
+.contact-info{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    width: 100%;
+    height: 315px;
+    background: var(--second-color);
+    border-radius: 10px;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    overflow: hidden;
+}
+.contact-info>h2{
+    color: var(--color-white);
+    margin-bottom: 20px;
+}
+.contact-info>p{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-white);
+    margin-block: 5px;
+}
+.contact-info p>i{
+    font-size: 18px;
+}
+.contact-info::after{
+    background: var(--color-white);
+}
+.contact-info:hover.contact-info h2,
+.contact-info:hover.contact-info p,
+.contact-info:hover.contact-info i{
+    color: #777;
+    z-index: 2;
+}
+
+/* ----- CONTACT FORM ----- */
+.form-control{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.form-inputs{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+.input-field{
+    width: 50%;
+    height: 55px;
+    background: transparent;
+    border: 2px solid #AAA;
+    border-radius: 10px;
+    padding-inline: 20px;
+    outline: none;
+}
+textarea{
+    width: 100%;
+    height: 250px;
+    background: transparent;
+    border: 2px solid #AAA;
+    border-radius: 10px;
+    padding: 15px 20px;
+    outline: none;
+    resize: none;
+}
+.form-button>.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--second-color);
+    color: var(--color-white);
+}
+.form-button>.btn:hover{
+    background: #00B5E7;
+}
+.form-button i{
+    font-size: 18px;
+    rotate: -45deg;
+}
+
+/* ----- FOOTER BOX ----- */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 30px;
+    background: #F8F8F8;
+    padding-block: 40px 60px;
+    color: #777;
+}
+.top-footer p{
+    font-size: 25px;
+    font-weight: 600;
+   
+}
+.middle-footer .footer-menu{
+    display: flex;
+}
+.footer_menu_list{
+    list-style: none;
+}
+.footer_menu_list a{
+    text-decoration: none;
+    color: var(--text-color-second);
+    font-weight: 500;
+    margin-inline: 20px;
+}
+.footer-social-icons{
+    display: flex;
+    gap: 30px;  
+}
+.bottom-footer{
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+/* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
+@media only screen and (max-width: 1024px){
+    .featured-text{
+        padding: 0;
+    }
+    .image, .image img{
+        width: 320px;
+        height: 320px;
+    }
+}
+
+/* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
+@media only screen and (max-width: 900px) {
+    .nav-button{
+        display: none;
+    }
+    .nav-menu.responsive{
+        left: 0;
+    }
+    .nav-menu{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
+        width: 100%;
+        min-height: 450px;
+        height: 90vh;
+        transition: .3s;
+    }
+    .nav_menu_list{
+        flex-direction: column;
+    }
+    .nav-menu-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .featured-box{
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
+    .featured-text{
+        width: 100%;
+        order: 2;
+        justify-content: center;
+        align-content: flex-start;
+        min-height: 60vh;
+    }
+    .social_icons{
+        margin-top: 2em;
+    }
+    .featured-image{
+        order: 1;
+        justify-content: center;
+        min-height: 150px;
+        width: 100%;
+        margin-top: 65px;
+    }
+     .image, .image img{
+        width: 150px;
+        height: 150px;
+    }
+   .img, .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+    }
+ .img, .col{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+       
+    }
+   .label1, .about-info, .contact-info{
+        width: 100%;
+       
+    }
+    .project-container{
+        justify-content: center;
+    }
+    .project-box{
+        width: 80%;
+    }
+    .footer_menu_list{
+        justify-content: center;
+    }
+
+}
+
+/* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
+
+@media only screen and (max-width: 540px){
+    .featured-name{
+        font-size: 40px;
+    }
+    .project-box{
+        width: 100%;
+    }
+    .form-inputs{
+        flex-direction: column;
+    }
+    .input-field{
+        width: 100%;
+    }
+     .footer_menu_list{
+        justify-content: center;
+    }
+}
+
+/* ----- MEDIA QUERY == 390px / RESPONSIVE ----- */
+@media only screen and (max-width: 390px) {
+    .nav-button{
+        display: none;
+    }
+    .nav-menu.responsive{
+        left: 0;
+    }
+    .nav-menu{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
+        width: 100%;
+        min-height: 450px;
+        height: 90vh;
+        transition: .3s;
+    }
+    .nav_menu_list{
+        flex-direction: column;
+    }
+    .nav-menu-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .featured-box{
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
+    .featured-text{
+        width: 100%;
+        order: 2;
+        justify-content: center;
+        align-content: flex-start;
+        min-height: 60vh;
+    }
+    .social_icons{
+        margin-top: 2em;
+    }
+    .featured-image{
+        order: 1;
+        justify-content: center;
+        min-height: 150px;
+        width: 100%;
+        margin-top: 65px;
+    }
+r   .image, .image img{
+        width: 150px;
+        height: 150px;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+    }
+  .label1,  .col{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+       
+       
+    }
+ .about-info, .contact-info{
+        width: 100%;
+    }
+    .project-container{
+        justify-content: center;
+    }
+    .project-box{
+        width: 80%;
+    }
+     .footer_menu_list{
+        justify-content: center;
+    }
+
+}
+</style>
+
+    <!-- --------- FAVICON ---------- -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <title>Portfolio | Dheeraj Gudi</title>
 </head>
 <body>
+   <div class="container">
+    <!-- --------------- HEADER --------------- -->
+      <nav id="header">
+        <div class="nav-logo">
+            <p class="nav-name">Dheeraj</p>
+            <span>.</span>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+            <ul class="nav_menu_list">
+                <li class="nav_list">
+                    <a href="#home" class="nav-link active-link">Home</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#about" class="nav-link ">About</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#education" class="nav-link">Education</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#projects" class="nav-link ">Projects</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#contact" class="nav-link ">Contact</a>
+                    <div class="circle"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-button" onclick="window.location.href='https://github.com/GudiDheeraj/resume/blob/main/Dheeraj.pdf';">
+            <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+        </div>
+      </nav>
 
-<h2>
-    <abc>
-        <br>Hi there! <img src="https://user-images.githubusercontent.com/42378118/110234147-e3259600-7f4e-11eb-95be-0c4047144dea.gif" alt="Wave" width="30"><br>
-        <br> I'm Narendra Ogety, Business Analyst and currently pursuing my Master's at Saint Louis University :computer:<br><br>
-        <img src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" alt="Coder GIF" width="500">
-    </abc>
-</h2>
 
-<h2 align="left">:hammer_and_wrench: Technologies and Tools I use:</h2>
-<p class="technologies" align="left">
-    <a href="https://www.w3.org/html/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5"/> </a>
-    <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3"/> </a>
-    <a href="https://sass-lang.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass"/> </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript"/> </a>
-    <a href="https://webpack.js.org/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/js_webpack/js_webpack-icon.svg" alt="webpack"/> </a>
-    <a href="https://reactjs.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react"/> </a>
-    <a href="https://www.gatsbyjs.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/gatsbyjs/gatsbyjs-icon.svg" alt="gatsby"/> </a>
-    <a href="https://nodejs.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs"/> </a>
-    <a href="https://expressjs.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express"/> </a>
-    <a href="https://www.mongodb.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb"/> </a>
-    <a href="https://www.postman.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman"/> </a>
-    <a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git"/> </a>
-    <a href="https://azure.microsoft.com/en-us/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="azure"/> </a>
-    <a href="https://cloud.google.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="google cloud"/> </a>
-    <a href="https://firebase.google.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase"/> </a>
-</p>
+    <!-- -------------- MAIN ---------------- -->
+    <main class="wrapper">
+       <!-- -------------- FEATURED BOX ---------------- -->
+       <section class="featured-box" id="home">
+          <div class="featured-text">
+            <div class="featured-text-card">
+                <span>Dheeraj Gudi</span>
+            </div>
+            <div class="featured-name">
+                <p>I'm <span class="typedText"></span></p>
+            </div>
+            <div class="featured-text-info">
+                <p>Experienced Software Engineer with a passion for challenging roles in data science.
+                </p>
+            </div>
+            <div class="featured-text-btn" onclick="window.location.href='https://github.com/GudiDheeraj/resume/blob/main/Dheeraj.pdf';">
+               
+                <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
+            </div>
+            <div class="social_icons">
+                <div class="icon" onclick="window.location.href='https://www.instagram.com/gudidheeraj/?igsh=ZndqMXZ0M3BoNG1q';"><i class="uil uil-instagram"></i></div>
+                <div class="icon" onclick="window.location.href='https://www.linkedin.com/in/gudi-dheeraj-184aa115a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app';"><i class="uil uil-linkedin-alt"></i></div>
+               
+                <div class="icon" onclick="window.location.href='https://github.com/GudiDheeraj';"><i class="uil uil-github-alt"></i></div>
+            </div>
+          </div>
+          <div class="featured-image">
+            <div class="image">
+                <img src="dheeraj.jpg" alt="avatar">
+            </div>
+          </div>
+          <div class="scroll-icon-box">
+            <a href="#about" class="scroll-btn">
+                <i class="uil uil-mouse-alt"></i>
+                <p>Scroll Down</p>
+            </a>
+          </div>
 
-<h2 align="left" class="about-me">👨🏻‍💻 About Me:</h2>
-<ul>
-    <li>:computer: I'm a Business Analyst, currently pursuing my Master's at Saint Louis University and exploring Analyst Roles</li>
-    <li>:hourglass_flowing_sand: Passionate about exploring and analyzing data</li>
-    <li>:rocket: Always excited to collaborate on data analysis projects</li>
-    <li>:man_technologist: Former Project Lead Intern at Excelerate</li>
-    <li>:dart: Life Hack: "Explore :fire: and Explode :bomb: with knowledge"</li>
-    <li>:zap: Fun fact: I enjoy attending meetups to learn and conferences to network</li>
-</ul>
+       </section>
+       <!-- -------------- ABOUT BOX ---------------- -->
+       <section class="section" id="about">
+          <div class="top-header">
+            <h1>About Me</h1>
+          </div>
+          <div class="row">
+            <div class="col">
+                <div class="about-info">
+                    <h3 >My introduction</h3>
+                    <p>Distinguished by a robust foundation as an SAP ABAP developer, I bring forth a proven track record spanning two years, underscored by a commitment to excellence and adaptability. Currently advancing my expertise through pursuit of a Master's in Data Science, I present a unique fusion of technical proficiency and analytical acumen.</p>
+<br>
+<p>With an unwavering dedication to precision and quality, I am poised to seamlessly transition into pivotal roles within the spheres of Data Science and Analytics. My multifaceted skill set positions me as a compelling candidate for opportunities in Data Science, Data Analysis, and SAP ABAP development. I stand ready to contribute innovative solutions, leveraging my diverse background to drive success in forward-thinking organizations.</p>
+<br>
+<p>My professional journey is characterized by a relentless pursuit of mastery, and I am eager to bring this passion to roles that demand a dynamic blend of technical prowess and strategic thinking. As an individual poised at the intersection of technology and data, I am confident in my ability to deliver tangible value and contribute meaningfully to the objectives of progressive organizations.
 
-<h2 align="left" class="connect">:heart: Let's get connected:</h2>
-<a href="https://www.linkedin.com/in/narendraogety/" target="_blank" class="badge">LinkedIn Profile</a>
 
+
+
+
+
+
+                    </p>
+                   
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="skills-box">
+                    <div class="skills-header">
+                        <h3>Web Technologies</h3>
+                    </div>
+                    <div class="skillssub-header">
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <br>
+                     <div class="skillssub-header">
+                        <h3>Backend</h3>
+                    </div>
+                   
+                    <div class="skills-list">
+                        <span>C++</span>
+                        <span>Python</span>
+                     
+                    </div>
+                    <br>
+                    <div class="skillssub-header">
+                        <h3>Database</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>PL/SQL</span>
+                        <span>MongoDB</span>
+                     
+                    </div>
+                  <br>
+<br>
+                    <div class="skills-header">
+                        <h3>Programming</h3>
+                    </div>
+                     <div class="skillssub-header">
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>Python</span>
+                        <span>C++</span>
+                        <span>R</span>
+                        <span>C</span>
+                    </div>
+<br>
+                    <div class="skillssub-header">
+                        <h3>Problem Solving</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>Data Structures</span>
+                        <span>Algorithim Design</span>
+                       
+                     
+                    </div>
+<br>
+                   
+                   
+             
+                </div>
+             
+                <div class="skills-box">
+                    <div class="skills-header">
+                        <h3>Data Science Skills</h3>
+                    </div>
+                    <div class="skillssub-header">
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>Python</span>
+                       
+                        <span>R</span>
+                       
+                    </div>
+<br>
+                    <div class="skillssub-header">
+                        <h3>Data Analysis</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>Pandas</span>
+                        <span>Numpy</span>
+                    </div>
+<br>
+                    <div class="skillssub-header">
+                        <h3>Data Visualization</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>Matplotlib</span>
+                       
+                    </div>
+<br>
+                     <div class="skillssub-header">
+                        <h3>Machine Learning</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>TensorFlow</span>
+                       
+                    </div>
+<br>
+                    <div class="skillssub-header">
+                        <h3>Statistical Analysis</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>Statistical Modeling</span>
+                        <span>Hypothesis Testing</span>
+                        <span>Regression Analysis</span>
+                    </div>
+                </div>
+           
+               
+            </div>
+          </div>
+       </section>
+<!------------------------edu--------------------------->
+ 
+
+         
+<section class="section" id="education" >
+<div class="top-header">
+            <h1>Education</h1>
+          </div>
+<div class="education-container">
+          <div class="row">
+
+            <div class="col">
+                <div class="about-info">
+                 
+
+<p><b>Master of Data Science - Durham University, UK (Sept/2023 - Current):</b></p>
+                    <br><p>
+Currently pursuing a Master's in Data Science at Durham University, UK, specializing in Python, Statistics, R language, Machine Learning, Data Exploration, Visualization, Unsupervised Learning, Text Mining, Language Analysis, and Strategic Leadership. This program is equipping me with advanced skills to tackle complex data challenges, fostering a comprehensive understanding of the field.</p>
+<br>
+</div>
+                </div>
+<div class="col">
+                <div class="about-info">
+<p><b>Master of Computer Application (Online) - Manipal University, India (Nov/2021 - Dec/2023):</b></p><br>
+<p>Achieved a CGPA of 8.78/10 in the online Master of Computer Application program from Manipal University, Jaipur, India. Successfully managed academic commitments alongside professional responsibilities, demonstrating strong time management and dedication. This experience has honed my ability to balance work and education, emphasizing adaptability and a commitment to continual improvement.</p>
+<br>
+</div>
+                </div>
+<div class="col">
+                <div class="about-info">
+<p><b>Bachelor of Technology (Hons.) - SASTRA Deemed University, India (Aug/2017 - Sept/2021):</b><p><br>
+<p>With a commendable CGPA of 8.43/10, I've completed honors in diverse subjects such as Automation in Manufacturing, Manufacturing Systems Technology, Aircraft Design, and Rocket Propulsion. Notably, I attained honors distinction among my peers. Additionally, I secured a coveted spot in the Dean's Merit List for my outstanding academic achievements during the academic year 2019.
+
+
+
+
+
+
+
+                    </p>
+                   </div>
+                </div>
+            </div>
+</div>
+</section >
+
+     
+
+               
+
+
+       <!-- -------------- PROJECT BOX ---------------- -->
+
+       <section class="section" id="projects">
+          <div class="top-header">
+              <h1>Projects</h1>
+          </div>
+          <div class="project-container">
+            <div class="project-box">
+                <i class="uil uil-briefcase-alt"></i>
+                <h3>Professional</h3>
+                <label class="label1"><p>SAP ABAP Developer for 2 clients in project roles in TCS.</p></label>
+            </div>
+            <div class="project-box"
+onclick="window.location.href='https://github.com/GudiDheeraj';">
+                <i class="uil uil-briefcase-alt"></i>
+                <h3>Personal</h3>
+                <label class="label1"><p>Successfully completed over 10 personal projects</p></label>
+            </div>
+            <div class="project-box" onclick="window.location.href='https://www.springerprofessional.de/en/numerical-investigations-on-performance-of-triple-pipe-heat-exch/23677562';">
+                <i class="uil uil-users-alt"></i>
+                <h3>Publications</h3>
+                <label class="label1"><p>Authored and published a conference paper in Springer.</p></label>
+            </div>
+            <div class="project-box">
+                <i class="uil uil-award"></i>
+                <h3>Experience</h3>
+                <label class="label1"><p>2+ Years in SAP ABAP</p></label>
+            </div>
+          </div>
+       </section>
+
+       <!-- -------------- CONTACT BOX ---------------- -->
+
+       <section class="section" id="contact">
+          <div class="top-header">
+            <h1>Get in touch</h1>
+            <span>Ready to innovate, seeking a role in your company, contact me here</span>
+          </div>
+          <div class="row">
+             <div class="col">
+                <div class="contact-info">
+                    <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+                    <p><i class="uil uil-envelope"></i> Email: dheeraj.gudi1999@gmail.com</p>
+                    <p><i class="uil uil-phone"></i> Tel: +44 7733658594</p>
+                </div>
+             </div>
+             <div class="col">
+                <div class="contact-info">
+                    <h2>Address <i class="uil uil-corner-right-down"></i></h2>
+                    <p><i class="uil uil-university"></i> Durham University, Durham, United Kingdom</p>
+                    <p><i class="uil uil-home"></i> Temporary Address UK: 51 Prebends field, Durham, UK</p>
+                </div>
+             </div>
+          </div>
+       </section>
+
+    </main>
+
+
+    <!-- --------------- FOOTER --------------- -->
+    <footer>
+     
+        <div class="top-footer">
+            <p class="nav-name">Dheeraj Gudi .</p>
+        </div>
+        <div class="middle-footer">
+            <ul class="footer-menu">
+                <li class="footer_menu_list">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#about">About</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#education">Education</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#projects">Projects</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-social-icons">
+            <div class="icon" onclick="window.location.href='https://www.instagram.com/gudidheeraj/?igsh=ZndqMXZ0M3BoNG1q';"><i class="uil uil-instagram"></i></div>
+            <div class="icon" onclick="window.location.href='https://www.linkedin.com/in/gudi-dheeraj-184aa115a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app';"><i class="uil uil-linkedin-alt"></i></div>
+            <div class="icon" onclick="window.location.href='https://github.com/GudiDheeraj';"><i class="uil uil-github-alt"></i></div>
+        </div>
+        <div class="bottom-footer">
+            <p class="no">Copyright &copy; <a href="#home" style="text-decoration: none;">Gudi Dheeraj</a> - All rights reserved</p>
+        </div>
+    </footer>
+
+    </div>
+
+
+
+
+    <!-- ----- TYPING JS Link ----- -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+       <!-- ----- SCROLL REVEAL JS Link----- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ----- MAIN JS ----- -->
+    <script >
+/* ----- NAVIGATION BAR FUNCTION ----- */
+    function myMenuFunction(){
+      var menuBtn = document.getElementById("myNavMenu");
+
+      if(menuBtn.className === "nav-menu"){
+        menuBtn.className += " responsive";
+      } else {
+        menuBtn.className = "nav-menu";
+      }
+    }
+
+/* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
+    window.onscroll = function() {headerShadow()};
+
+    function headerShadow() {
+      const navHeader =document.getElementById("header");
+
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop >  50) {
+
+        navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
+        navHeader.style.height = "70px";
+        navHeader.style.lineHeight = "70px";
+
+      } else {
+
+        navHeader.style.boxShadow = "none";
+        navHeader.style.height = "90px";
+        navHeader.style.lineHeight = "90px";
+
+      }
+    }
+
+
+/* ----- TYPING EFFECT ----- */
+   var typingEffect = new Typed(".typedText",{
+      strings : ["Data Scientist","SAP ABAP Developer","Programmer"],
+      loop : true,
+      typeSpeed : 100,
+      backSpeed : 80,
+      backDelay : 2000
+   })
+
+
+/* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
+   const sr = ScrollReveal({
+          origin: 'top',
+          distance: '80px',
+          duration: 2000,
+          reset: true    
+   })
+
+  /* -- HOME -- */
+  sr.reveal('.featured-text-card',{})
+  sr.reveal('.featured-name',{delay: 100})
+  sr.reveal('.featured-text-info',{delay: 200})
+  sr.reveal('.featured-text-btn',{delay: 200})
+  sr.reveal('.social_icons',{delay: 200})
+  sr.reveal('.featured-image',{delay: 300})
+ 
+
+  /* -- PROJECT BOX -- */
+  sr.reveal('.project-box',{interval: 200})
+
+  /* -- HEADINGS -- */
+  sr.reveal('.top-header',{})
+
+/* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
+
+  /* -- ABOUT INFO & CONTACT INFO -- */
+  const srLeft = ScrollReveal({
+    origin: 'left',
+    distance: '80px',
+    duration: 2000,
+    reset: true
+  })
+ 
+  srLeft.reveal('.about-info',{delay: 100})
+  srLeft.reveal('.contact-info',{delay: 100})
+
+  /* -- ABOUT SKILLS & FORM BOX -- */
+  const srRight = ScrollReveal({
+    origin: 'right',
+    distance: '80px',
+    duration: 2000,
+    reset: true
+  })
+ 
+  srRight.reveal('.skills-box',{delay: 100})
+  srRight.reveal('.form-control',{delay: 100})
+ 
+
+
+/* ----- CHANGE ACTIVE LINK ----- */
+ 
+  const sections = document.querySelectorAll('section[id]')
+
+  function scrollActive() {
+    const scrollY = window.scrollY;
+
+    sections.forEach(current =>{
+      const sectionHeight = current.offsetHeight,
+          sectionTop = current.offsetTop - 50,
+        sectionId = current.getAttribute('id')
+
+      if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+
+          document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-link')
+
+      }  else {
+
+        document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-link')
+
+      }
+    })
+  }
+
+  window.addEventListener('scroll', scrollActive)
+</script>
 </body>
 </html>
