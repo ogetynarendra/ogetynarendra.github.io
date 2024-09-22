@@ -1,40 +1,79 @@
-<h2 align="left">
- <abc>
-  <br>Hi there! <img src="https://user-images.githubusercontent.com/42378118/110234147-e3259600-7f4e-11eb-95be-0c4047144dea.gif" width="30"><br>
-  <br> I'm Narendra Ogety, Business Analyst :computer:<br>
-  <br>
-    <img src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" alt="Coder GIF" width="500">
- </abc>
-</h2> 
-<h2 align="left">:hammer_and_wrench: Technologies and Tools I use:</h2>
-<p align="left">
-    <a href="https://www.w3.org/html/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>
-    <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a>
-<a href="https://sass-lang.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="40" height="40"/> </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>
-<a href="https://webpack.js.org/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/js_webpack/js_webpack-icon.svg" alt="webpack" width="40" height="40"/> </a>
-<a href="https://reactjs.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a>
-<a href="https://www.gatsbyjs.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/gatsbyjs/gatsbyjs-icon.svg" alt="gatsby" width="40" height="40"/> </a>
-      <a href="https://nodejs.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a>
-    <a href="https://expressjs.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/> </a>
-    <a href="https://www.mongodb.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a>
-<a href="https://www.postman.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a>
-<a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a>
-<a href="https://azure.microsoft.com/en-us/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="azure" width="40" height="40"/> </a>
- <a href="https://cloud.google.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="google cloud" width="40" height="40"/> </a>
- <a href="https://firebase.google.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> </a>
-    </p>
+# 👋 Hello! I'm Narendra Ogety
 
-<h2 align="left">👨🏻‍💻 About Me:</h2>
+🚀 **Business Analyst** | 💻 **SQL, Python, Tableau, Excel** | 📊 **Data Enthusiast**
 
-- :computer: I'm a Business Analyst, currently exploring Analyst Roles
-- :hourglass_flowing_sand: Exploring data
-- :rocket: Always ready to collaborate for Analysis
-- :man_technologist: Former Project Lead Intern at Excelerate
-- :dart: Life Hack: "Explore :fire: and Explode :bomb: with knowledge"
-- :zap: Fun fact: I love to attend Meetups for learning & Conferences for Networking<br>
+---
 
-<h2 align="left">:heart: Let's get connected:</h2>
+![Business Analyst](https://your-image-link-here.com) <!-- Replace this with your own image link -->
 
-[![Linkedin Badge](https://img.shields.io/badge/-narendraogety-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/narendraogety/)](https://www.linkedin.com/in/narendraogety/)
+## 👨‍💼 About Me
 
+I'm a **Business Analyst** with hands-on experience in **data analysis**, **visualizations**, and **business strategy development**. My passion lies in transforming raw data into actionable insights through **SQL**, **Python**, **Tableau**, and **Excel**. I enjoy solving complex problems and optimizing processes to help businesses grow.
+
+---
+
+## 💼 Experience
+
+### **Data Visualization Intern**  
+**Excelerate** – Dubai (Remote)  
+**May 2023 - July 2023**  
+
+- 🛠 Cleaned and analyzed large datasets using **Python** and **SQL**, ensuring data integrity to support business decisions.
+- 📊 Developed and deployed interactive dashboards and reports using **Tableau**, delivering actionable insights to key stakeholders.
+- 🤝 Collaborated with cross-functional teams to implement data-driven strategies, optimizing visualization processes for better impact.
+- 📝 Documented methodologies and synthesized results to enhance future data analysis consistency and performance evaluations.
+- 🚀 Assessed data-driven initiatives, leading to improved business decisions through comprehensive insights and performance metrics.
+
+---
+
+### **Business Analyst**  
+**Leap Scholar** – Bengaluru, Karnataka  
+**Nov 2021 – June 2023**  
+
+- 🔍 Collected, organized, and analyzed data from various sources using **SQL** and **Excel**, providing validated insights for strategic decisions.
+- 📈 Performed **Exploratory Data Analysis (EDA)** and hypothesis testing to assess and enhance business strategies.
+- 📊 Created comprehensive reports and developed visualizations in **Tableau**, delivering key insights to stakeholders for informed decision-making.
+- 🤝 Collaborated with marketing and sales teams to drive data-driven strategies, optimizing business processes and improving performance.
+- 🚀 Led process improvement initiatives that streamlined operations, enhanced efficiency, and contributed to better overall outcomes.
+
+---
+
+### **Marketing Research Analyst**  
+**Zolostays** – Bengaluru, Karnataka  
+**June 2021 – Nov 2021**  
+
+- 🔍 Conducted comprehensive market research and analyzed consumer behavior using **SQL** and **Python**, identifying key trends and growth opportunities.
+- 📊 Developed and presented data visualizations with **Tableau**, delivering actionable insights and reports to stakeholders for better decision-making.
+- 🤝 Collaborated with cross-functional teams to analyze market trends and create data-driven strategies, contributing to strategic planning.
+- 📈 Synthesized data from multiple sources to evaluate marketing campaigns, provided recommendations for adjustments, and optimized future initiatives.
+- 📊 Monitored **key performance indicators (KPIs)**, summarized insights, and recommended strategies to enhance campaign effectiveness and overall business performance.
+
+---
+
+## 💡 Skills
+
+- **Languages**: SQL, Python
+- **Data Visualization**: Tableau
+- **Tools**: Excel, PowerBI
+- **Other Skills**: Data Analysis, EDA, Hypothesis Testing, Market Research
+
+---
+
+## 📬 Contact Me
+
+- 📧 Email: narendraogety27@gmail.com
+- 📞 Phone: +1 314-335-0418
+- 🌐 [Portfolio Website](https://your-portfolio-link.com) <!-- Add your portfolio link here -->
+- 💼 [LinkedIn](https://www.linkedin.com/in/your-linkedin-profile) <!-- Add your LinkedIn profile link here -->
+
+![Tableau Dashboard](https://your-image-link-here.com) <!-- Replace this with a Tableau dashboard image or other relevant image -->
+
+---
+
+### 📊 Featured Projects
+- **[Data Visualization Project](https://github.com/your-project-link)** – A detailed project showcasing interactive dashboards created in **Tableau** using large datasets.  
+- **[SQL Analysis](https://github.com/your-project-link)** – A comprehensive **SQL** data analysis project involving **complex queries** and **business insights**.
+
+---
+
+💻 Feel free to explore my repositories and reach out for collaboration opportunities!
